@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: bookhub
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+  flyway:
+    enabled: true
+
+springdoc:
+  api-docs:
+    path: /api/api-docs
+  swagger-ui:
+    path: ${SWAGGER_PATH}
+
+bookhub:
+  security:
+    secret: ${JWT_SECRET}
